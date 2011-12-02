@@ -9,8 +9,8 @@ Useful if you have a phone connected to a machine in a remote place. Just connec
 * The script uses `subprocess` to open `adb` to connect to the phone.
 * A command is passed to ADB to execute `sqlite3` on the phone, passing it the SMS database
 * A date is read from the `last_check` file in the same directory
-** If no file exists, or there is no date in it, the script gets all messages from the phone
-** If there is a date, the script checks for messages newer than the contents of the file
+* If no file exists, or there is no date in it, the script gets all messages from the phone
+* If there is a date, the script checks for messages newer than the contents of the file
 * After running, the current timestamp is written to the file, so when we run the script next time, only newer SMSs are returned.
 
 
