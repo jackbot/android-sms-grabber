@@ -34,4 +34,4 @@ The script currently just pulls __from__, __date__ and __body__ from the SMS db.
 
 
 ##Notes
-I've only tested this on OSX 10.7 with a rooted T-Mobile G1, YMMV.
+I've only tested this on Ubuntu 11.10 with a rooted T-Mobile G1, YMMV.
