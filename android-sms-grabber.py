@@ -21,10 +21,10 @@ def init():
 		exit(1)
 
 	# Check there's a phone connected
-    # `adb devices` returns something like
-    # List of devices attached 
-    # HT111111111  device
-    # So we need to check for >1 occurrence of 'device'	
+	# `adb devices` returns something like
+	# List of devices attached 
+	# HT111111111  device
+	# So we need to check for >1 occurrence of 'device'	
 	adb_devices = subprocess.check_output(['adb', 'devices'])
 	if adb_devices.count('device') < 2:
 		if debug: print 'No phone connected.'
@@ -75,7 +75,7 @@ def get_new_messages():
 	if debug: print messages
 
 	# Write last check time to the file
-	now_ms = date=int(round(time.time() * 1000))
+	now_ms = int(round(time.time() * 1000))
 	with open(last_check_file, 'w') as f:
 		f.write(str(now_ms))
 	
